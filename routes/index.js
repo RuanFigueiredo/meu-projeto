@@ -8,5 +8,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/contato', indexController.viewContato)
+router.get('/confirmarcontato', indexController.confirmarContato)
 
-module.exports = router;
+module.exports = router; 
