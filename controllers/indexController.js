@@ -5,7 +5,7 @@ let indexController = {
     },
     confirmarContato: (req,res)=>{
         let {nome, email} = req.query;
-        res.send("olá, recebido com sucesso!"+nome)
+        res.send("olá, recebido com sucesso!"+nome)/redirect
     }
 }
 
