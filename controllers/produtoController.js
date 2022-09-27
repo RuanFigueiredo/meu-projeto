@@ -3,7 +3,13 @@ let produtoController = {
             return res.render('produto');
         },
         salvarForm: (req,res)=>{
-            return res.send(req.body);
+          let {nomeProduto, precoProduto} = req.body;
+          res.send("o produto:"+nomeProduto+"custa:"+precoProduto+"R$");   
+          res.redirect('/produtos/sucesso');
+
+        },
+        sucesso:(req,res)=>{
+           return res.render('sucesso');
         }
 
     }
