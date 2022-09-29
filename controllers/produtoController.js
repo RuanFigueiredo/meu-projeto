@@ -10,6 +10,23 @@ let produtoController = {
         },
         sucesso:(req,res)=>{
            return res.render('sucesso');
+        },
+        viewAttForm: (req,res)=>{
+          let {id} = req.params;
+
+          let produtos = [
+            {
+               id:1,
+               nome:"chinela",
+               preco:10
+            },
+            {
+              id:2,
+              nome:"kenner",
+              preco:20
+            }
+          ]
+            res.render('editarProduto', {produto:produtos[id]})
         }
 
     }
